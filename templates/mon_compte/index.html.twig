@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Compte{% endblock %}
+
+{% block body %}
+{% include ('partials/header.html.twig') %}
+    <div class="grow">
+        <section class="flex justify-center items-center flex-col lg:space-y-3 space-y-2">
+            <h2 class="text-red-400 lg:text-xl md:text-lg text-base">Vos informations : </h2>
+            <p class="font-extrabold">Votre adresse email : <span class="text-red-600 lg:text-lg text-base font-bold">{{ app.user.userIdentifier }}</span></p>
+            <p class="font-extrabold">Votre nom : <span class="text-red-600 lg:text-lg text-base font-bold">{{ app.user.nom }}</span></p>
+            <p class="font-extrabold">Votre prénom : <span class="text-red-600 lg:text-lg text-base font-bold">{{ app.user.prenom }}</span></p>
+        </section>
+    </div>
+{% include ('partials/footer.html.twig') %}
+{% endblock %}
